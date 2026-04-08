@@ -1,13 +1,16 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="mt-auto border-t border-white/10 bg-[#0a0a1a] py-8 px-4">
+    <footer className="mt-auto border-t border-white/10 bg-dark py-8 px-4">
       <div className="max-w-4xl mx-auto flex flex-col items-center gap-4">
-        <img
+        <Image
           src="/logo-cr-white.png"
           alt="Consulting Revolution"
-          className="h-6"
+          width={180}
+          height={24}
+          className="h-6 w-auto"
         />
         <div className="flex items-center gap-2 text-sm">
           <Link href="/privacy" className="text-white/60 hover:text-white/90 transition-colors">

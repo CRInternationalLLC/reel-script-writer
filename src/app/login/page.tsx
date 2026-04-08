@@ -3,6 +3,7 @@
 import { useState, FormEvent } from "react";
 import { createClient } from "@/lib/supabase";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import Footer from "@/components/Footer";
 
 export default function LoginPage() {
@@ -50,10 +51,12 @@ export default function LoginPage() {
           {/* Logo */}
           <div className="text-center space-y-3">
             <div className="flex items-center justify-center mb-2">
-              <img
+              <Image
                 src="/logo-cr-white.png"
                 alt="Consulting Revolution"
-                className="h-8"
+                width={220}
+                height={30}
+                className="h-8 w-auto"
               />
             </div>
             <h1 className="text-2xl font-bold text-white">Reel Script Writer</h1>
