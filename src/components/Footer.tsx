@@ -1,14 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
+import logoCr from "../../public/logo-cr-white.png";
 
 export default function Footer() {
   return (
     <footer className="mt-auto border-t border-white/10 bg-dark py-8 px-4">
       <div className="max-w-4xl mx-auto flex flex-col items-center gap-4">
         <Image
-          src="/logo-cr-white.png"
+          src={logoCr}
           alt="Consulting Revolution"
-          width={180}
           height={24}
           className="h-6 w-auto"
         />
