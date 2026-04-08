@@ -1,12 +1,31 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
-    <footer className="mt-auto border-t border-white/5 py-8 px-4 text-center">
-      <p className="text-text-muted text-sm font-medium tracking-wide">
-        Consulting Revolution
-      </p>
-      <p className="text-text-muted/50 text-xs mt-1">
-        Powered by AI &middot; Metodo Edoardo Barravecchia
-      </p>
+    <footer className="mt-auto border-t border-white/10 bg-[#0a0a1a] py-8 px-4">
+      <div className="max-w-4xl mx-auto flex flex-col items-center gap-4">
+        <img
+          src="/logo-cr-white.png"
+          alt="Consulting Revolution"
+          className="h-6"
+        />
+        <div className="flex items-center gap-2 text-sm">
+          <Link href="/privacy" className="text-white/60 hover:text-white/90 transition-colors">
+            Privacy Policy
+          </Link>
+          <span className="text-white/30">&middot;</span>
+          <Link href="/terms" className="text-white/60 hover:text-white/90 transition-colors">
+            Termini di Servizio
+          </Link>
+          <span className="text-white/30">&middot;</span>
+          <Link href="/cookies" className="text-white/60 hover:text-white/90 transition-colors">
+            Cookie Policy
+          </Link>
+        </div>
+        <p className="text-white/30 text-xs">
+          &copy; 2026 CR International LLC &mdash; Tutti i diritti riservati
+        </p>
+      </div>
     </footer>
   );
 }

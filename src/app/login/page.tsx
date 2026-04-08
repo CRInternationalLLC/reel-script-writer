@@ -3,6 +3,7 @@
 import { useState, FormEvent } from "react";
 import { createClient } from "@/lib/supabase";
 import { useRouter } from "next/navigation";
+import Footer from "@/components/Footer";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -42,44 +43,18 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-dark flex items-center justify-center px-4">
+    <div className="min-h-screen bg-dark flex flex-col">
+      <div className="flex-1 flex items-center justify-center px-4">
       <div className="w-full max-w-md">
         <div className="glass-card p-8 sm:p-10 space-y-8">
           {/* Logo */}
           <div className="text-center space-y-3">
-            <div className="flex items-center justify-center gap-2 mb-2">
-              <svg
-                className="w-8 h-8 text-white"
-                viewBox="0 0 40 40"
-                fill="none"
-              >
-                <path
-                  d="M20 4C11.163 4 4 11.163 4 20s7.163 16 16 16c2.948 0 5.715-.798 8.09-2.187L20 20V4z"
-                  fill="url(#logo-grad)"
-                />
-                <path
-                  d="M20 4c8.837 0 16 7.163 16 16s-7.163 16-16 16"
-                  stroke="white"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  fill="none"
-                />
-                <defs>
-                  <linearGradient
-                    id="logo-grad"
-                    x1="4"
-                    y1="4"
-                    x2="28"
-                    y2="34"
-                  >
-                    <stop stopColor="#a855f7" />
-                    <stop offset="1" stopColor="#3b82f6" />
-                  </linearGradient>
-                </defs>
-              </svg>
-              <span className="text-white font-bold text-lg tracking-wider uppercase">
-                Consulting Revolution
-              </span>
+            <div className="flex items-center justify-center mb-2">
+              <img
+                src="/logo-cr-white.png"
+                alt="Consulting Revolution"
+                className="h-8"
+              />
             </div>
             <h1 className="text-2xl font-bold text-white">Reel Script Writer</h1>
             <p className="text-sm text-text-muted">
@@ -164,6 +139,8 @@ export default function LoginPage() {
           </div>
         </div>
       </div>
+      </div>
+      <Footer />
     </div>
   );
 }
